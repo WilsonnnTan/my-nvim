@@ -30,7 +30,7 @@ map("n", "<Leader>rr", "<cmd>lua vim.cmd('RustLsp runnables')<CR>", { desc = "Ru
 map("n", "<Leader>rp", function()
   vim.ui.input({ prompt = "Prompt: " }, function(input)
     if input == nil or input == "" then return end
-    vim.cmd.RustLsp { "runnables", "--prompt", input }
+    vim.cmd.RustLsp { "runnables", input }
   end)
 end, { desc = "Runnables with custom prompt" })
 
